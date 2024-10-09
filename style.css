@@ -1,0 +1,62 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    transition: background-color 0.3s ease;
+}
+
+body.dark {
+    background-color: #333;
+    color: #f4f4f9;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+body.dark .app-container {
+    background-color: #444;
+}
+
+#theme-toggle {
+    margin-bottom: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#task-form input, #task-form textarea, #task-form select, #task-form button {
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#task-list .task {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#task-list .task.high { border-left: 5px solid red; }
+#task-list .task.medium { border-left: 5px solid orange; }
+#task-list .task.low { border-left: 5px solid green; }

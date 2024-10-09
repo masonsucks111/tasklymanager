@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Taskly-Task Manager
+        
+        </h1>
+        <button id="theme-toggle">Toggle Dark Mode</button>
+
+        <!-- Task Input Form -->
+        <div id="task-form">
+            <input type="text" id="task-title" placeholder="Task Title" required>
+            <textarea id="task-desc" placeholder="Description"></textarea>
+            <input type="date" id="task-date" required>
+            <select id="task-priority">
+                <option value="High">High</option>
+                <option value="Medium">Medium</option>
+                <option value="Low">Low</option>
+            </select>
+            <input type="text" id="task-tags" placeholder="Tags (comma-separated)">
+            <select id="task-category">
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Shopping">Shopping</option>
+            </select>
+            <label>
+                <input type="checkbox" id="task-recurring"> Recurring
+            </label>
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        
+        <!-- Task List Display -->
+        <div id="task-list"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
